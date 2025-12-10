@@ -1,14 +1,208 @@
+@charset "UTF-8";
 body {
-  background: #000;
+  background: #000129;
+  margin: 0;
+}
+
+p {
+  font-family: "area-inktrap", sans-serif;
+  font-size: 22px;
+  color: #fff;
+  font-weight: 100;
+}
+
+h1 {
+  font-family: "indivisible", sans-serif;
+  font-size: 70px;
+  color: #fff;
+  font-weight: 600;
+}
+
+h2 {
+  font-family: "indivisible", sans-serif;
+  font-size: 54px;
+  color: #fff;
+  font-weight: 500;
+}
+
+h3 {
+  font-family: "indivisible", sans-serif;
+  font-size: 40px;
+  color: #fff;
+  font-weight: 500;
 }
 
 .header {
-  background-color: transparent;
-  display: inline;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  font-family: "indivisible", sans-serif;
+  background-image: url("/ressources_accueil/fond_header.png");
 }
 
-ul#menu li {
-  display: inline;
+.header .container {
+  display: flex;
+  background-color: transparent;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  padding: 10px 20px;
+}
+
+.nav ul#menu {
+  display: flex;
+  gap: 30px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav ul#menu li a {
+  color: #fff;
+  font-weight: 600;
+  font-size: 24px;
+  text-decoration: none;
+}
+
+#contact_button a {
+  background-color: #fff;
+  color: #F15CA3;
+  font-size: 24px;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 50px;
+  margin: 40px;
+}
+
+.hero {
+  background-image: url("/ressources_accueil/Fond_hero.png");
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.text_zone {
+  width: 75%;
+}
+
+.white_button {
+  color: #000129;
+  text-decoration: none;
+  background-color: #fff;
+  font-size: 20px;
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-family: "indivisible", sans-serif;
+  margin-right: 20px;
+}
+
+.white_button:hover {
+  color: #fff;
+  text-decoration: none;
+  background-color: transparent;
+  font-size: 20px;
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-family: "indivisible", sans-serif;
+  border: 2px solid #fff;
+}
+
+.trans_button {
+  color: #fff;
+  text-decoration: none;
+  background-color: transparent;
+  font-size: 20px;
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-family: "indivisible", sans-serif;
+  border: 2px solid #fff;
+}
+
+.trans_button:hover {
+  color: #000129;
+  text-decoration: none;
+  background-color: #fff;
+  font-size: 20px;
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-family: "indivisible", sans-serif;
+  margin-right: 20px;
+}
+
+.button_zone {
+  margin-top: 50px;
+  margin-bottom: 75px;
+}
+
+.accueil_apropos {
+  background-image: url(/ressources_accueil/fond_apropos_accueil.png);
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.service_accueil {
+  background-image: url(/ressources_accueil/fond_service_accueil.png);
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.description {
+  font-size: 16px;
+}
+
+#DA, #graphisme, #web {
+  border: 1px, solid, rgba(255, 255, 255, 0.4);
+  border-radius: 20px;
+  background-color: rgba(0, 1, 41, 0.3);
+  padding: 40px 40px;
+  width: 25%;
+}
+
+.box_spe {
+  display: flex;
+  gap: 50px;
+  margin-top: 30px;
+  width: 75%;
+}
+
+.équipe {
+  background-image: url(/ressources_accueil/fond_equipe.png);
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.photos {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
 }
 
 /*# sourceMappingURL=style.css.map */

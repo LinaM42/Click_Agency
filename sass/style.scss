@@ -1,3 +1,5 @@
+/*Général*/
+
 body {
     background: #000129;
     margin: 0;
@@ -30,6 +32,8 @@ h3 {
     color: #fff;
     font-weight: 500;
 }
+
+/*Le header*/
 
 .header {
     position: fixed;  
@@ -66,6 +70,11 @@ h3 {
     text-decoration: none;
 }
 
+.nav ul#menu li a:hover{
+    opacity: 0.9;
+    transform: scale(1.02);
+}
+
 #contact_button a {
     background-color: #fff;
     color: #F15CA3;
@@ -75,8 +84,67 @@ h3 {
     padding: 10px 20px;
     border-radius: 50px;
     margin: 40px;
+    transition: 0.3s ease;
 }
 
+#contact_button:hover {
+    opacity: 0.9;
+    transform: scale(1.02);
+}
+
+/* Le footer */
+
+.footer{
+    background-image: url("/ressources_accueil/fond_footer.png");
+}
+
+.container_footer{
+    display: flex;
+    gap: 200px;
+    margin-left: 100px;
+}
+.container_footer h3{
+    font-size: 40px;
+    text-align: left;
+}
+.container_footer h4{
+    font-size: 25px;
+    font-family: "Indivisible", sans-serif;
+    color: #fff;
+}
+.pages, .pages a {
+    font-family: "Indivisible", sans-serif;
+    font-size: 24px;
+    display: flex;
+    color: #fff;
+    text-decoration: none;
+    gap: 50px;
+    align-items: center;
+    justify-content: center;
+    text-align: left !important;
+}
+
+#contact{
+    text-align: end;
+}
+
+.pages a:hover{
+    transition: 0.3s ease;
+    opacity: 0.9;
+    transform: scale(1.02);
+}
+
+.logo_reseaux{
+    display: flex;
+    margin-top: 0px !important;
+}
+
+.reseaux h4{
+    margin-bottom: 0 !important;
+}
+
+
+/* Accueil */
 .hero {
     background-image: url("/ressources_accueil/Fond_hero.png");
     height: 100vh;
@@ -107,7 +175,7 @@ width: 75%;
 }
 
 .white_button:hover {
-     color: #fff;
+    color: #fff;
     text-decoration: none;
     background-color: transparent;
     font-size: 20px;
@@ -115,6 +183,9 @@ width: 75%;
     border-radius: 50px;
     font-family: "indivisible", sans-serif;
     border: 2px solid #fff;
+    transition: 0.3s ease;
+    opacity: 0.9;
+    transform: scale(1.02);
 
 }
 
@@ -137,7 +208,9 @@ width: 75%;
     padding: 10px 20px;
     border-radius: 50px;
     font-family: "indivisible", sans-serif;
-    margin-right: 20px;
+    transition: 0.3s ease;
+    opacity: 0.9;
+    transform: scale(1.02);
 }
 
 .button_zone {
@@ -177,12 +250,13 @@ width: 75%;
 }
 
 #DA, #graphisme, #web {
-    border: 1px, solid, rgba($color: #fff, $alpha: 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.4);
     border-radius: 20px;
-    background-color: rgba($color: #000129, $alpha: 0.3);
-    padding: 40px 40px;
+    background-color: rgba(0, 1, 41, 0.3);
+    padding: 40px;
     width: 25%;
 }
+
 
 .box_spe {
     display: flex;
@@ -209,6 +283,146 @@ width: 75%;
     flex-direction: row; 
     gap: 20px; 
 }
+
+/* Contact */
+
+.hero_contact {
+    background-image: url(ressources_contact/fond_hero.png);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    padding-top: 50px;
+
+    display: flex;            
+    flex-direction: column;    
+    justify-content: center;   
+    align-items: center; 
+    text-align: center;
+    width: 100%;
+
+}
+
+.text_zone h1, .text_zone p {
+    margin: 0 !important;
+}
+
+.informations {
+    margin-top: 40px;
+    text-align: left;
+    color: white;
+    font-family: "area-inktrap", sans-serif;
+    width: 50%;
+    
+}
+
+.informations > p {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    
+}
+
+.email, .tel, .loc {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: rgba(0, 1, 41, 0);
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid rgba(255,255,255,0.4);
+    backdrop-filter: blur(12px);
+    width: 350px;
+    margin-bottom: 10px;
+}
+
+.picto img {
+    width: 50px;
+}
+
+.text p:first-child {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.text p:last-child {
+    font-size: 14px;
+    margin: 0;
+    color: #8C8989;
+    
+}
+
+.container_contact{
+    display: flex;
+    align-items: center;
+    width: 80%;
+    margin-top: 50px;
+}
+
+.form-wrapper {
+    background: rgba(20, 20, 40, 0.5);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 18px;
+    padding: 20px;
+    width: 50%;
+    color: white;
+    font-family: "area_inktrap", sans-serif;
+    text-align: left !important; 
+}
+
+.contact_form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.row {
+    display: flex;
+    gap: 20px;
+}
+
+.field {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.field label {
+    font-size: 20px;
+    opacity: 0.9;
+}
+
+input, textarea {
+    background: rgba(0,0,0,0.2);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 10px;
+    padding: 12px 15px;
+    color: white;
+    font-size: 15px;
+    outline: none;
+}
+
+.submit_button {
+    width: 150px;
+    background: linear-gradient(90deg, #6f2bff, #e87055, #ffa94d);
+    border: none;
+    padding: 12px 12px;
+    border-radius: 12px;
+    color: white;
+    font-weight: 600;
+    margin-top: 10px;
+    transition: 0.3s ease;
+    
+}
+
+.submit_button:hover {
+    opacity: 0.9;
+    transform: scale(1.02);
+}
+
+
+
 
 .hero_apropos {
     background-image: url("/ressources_apropos/fond-apropos.png");

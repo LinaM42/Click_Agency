@@ -205,4 +205,50 @@ h3 {
   gap: 20px;
 }
 
+.hero_services {
+  background-image: url("/ressources_services/Fond_hero.png");
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.service_service {
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background: linear-gradient(180deg, #0a0520 0%, #1a0a3e 30%, #3d1f7a 60%, #8C52FF 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.box_spe_two {
+  display: flex;
+  gap: 50px;
+  margin-top: 30px;
+  width: 75%;
+}
+
+.zone_text {
+  width: 50%;
+}
+
+.parties {
+  margin-left: 50px;
+  margin-left: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: left;
+  text-align: left;
+}
+
 /*# sourceMappingURL=style.css.map */

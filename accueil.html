@@ -54,9 +54,86 @@
     </div>
 
 <!--bandeau séparation-->  
-    <div class="separation">
-        <img src="ressources_accueil/bandeau.svg" alt="bandeau séparation">
-    </div>
+    <style>
+        
+        body {
+          margin: 0;
+        }
+        
+        .bandeau {
+          background-color: #8C52FF;
+          overflow: hidden;
+          padding: 20px 0;
+        }
+        
+        .bandeau__track {
+          display: flex;
+          width: max-content;
+          animation: defilement 12s linear infinite;
+        }
+        
+        .bandeau__content {
+          display: flex;
+        }
+        
+        .bandeau__content span {
+        font-family: "area-inktrap", sans-serif;
+          color: white;
+          font-size: 1.5rem;
+          white-space: nowrap;
+          margin-right: 0.50rem;
+        }
+        
+        /* animation CONTINUE, sans attente */
+        @keyframes defilement {
+          from {
+            transform: translateX(0);
+          }
+          to {
+            transform: translateX(-50%);
+          }
+        }
+        </style>
+        
+            </head>
+            
+            <body>
+            
+                <div class="bandeau">
+                    <div class="bandeau__track">
+                      <div class="bandeau__content">
+                        <span>collaborative •</span>
+                        <span>stratégique •</span>
+                        <span>incarnée •</span>
+                        <span>collaborative •</span>
+                        <span>stratégique •</span>
+                        <span>incarnée •</span>
+                        <span>collaborative •</span>
+                        <span>stratégique •</span>
+                        <span>incarnée •</span>
+                        <span>collaborative •</span>
+                        <span>stratégique •</span>
+                        <span>incarnée •</span>
+                      </div>
+                  
+                      <!-- DUPLICATION pour boucle infinie -->
+                      <div class="bandeau__content">
+                        <span>collaborative •</span>
+                        <span>stratégique •</span>
+                        <span>incarnée •</span>
+                        <span>collaborative •</span>
+                        <span>stratégique •</span>
+                        <span>incarnée •</span>
+                        <span>collaborative •</span>
+                        <span>stratégique •</span>
+                        <span>incarnée •</span>
+                        <span>collaborative •</span>
+                        <span>stratégique •</span>
+                        <span>incarnée •</span>
+                      </div>
+                    </div>
+                  </div>          
+                </body>
 
 <!--service-->  
 

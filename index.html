@@ -1,11 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <title>Bandeau défilant</title>
+
+  <style>
+    body {
+      margin: 0;
+    }
+
+    .bandeau {
+      background-color: #020024;
+      overflow: hidden;
+      padding: 20px 0;
+    }
+
+    .bandeau__contenu {
+      display: inline-block;
+      white-space: nowrap;
+      animation: defilement 12s linear infinite;
+    }
+
+    .bandeau__contenu span {
+      color: white;
+      font-size: 1.5rem;
+      margin-right: 2rem;
+    }
+
+    @keyframes defilement {
+      0% {
+        transform: translateX(100%);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+  </style>
 </head>
+
 <body>
-    <p>Ouais ouais la teamzzzz trololilol les ongles longs ça dit quoi !</p>
+
+  <div class="bandeau">
+    <div class="bandeau__contenu">
+      <span>Découvrez nos services ★</span>
+      <span>Découvrez nos services ★</span>
+      <span>Découvrez nos services ★</span>
+      <span>Découvrez nos services ★</span>
+      <span>Découvrez nos services ★</span>
+    </div>
+  </div>
+
 </body>
 </html>

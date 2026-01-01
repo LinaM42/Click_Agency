@@ -1,0 +1,302 @@
+@font-face {
+    font-family: "Av05";
+    src: url("./font/av05-logotype.otf") format("opentype");
+}
+
+
+body{
+    background-color: #020202;
+}
+
+/*Le header*/
+
+.header { 
+    width: 100%;
+    z-index: 1000;  
+    font-family: "indivisible", sans-serif;
+    background-color: #020202;
+    
+}
+
+.header .container {
+    display: flex;
+    background-color: transparent;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    padding: 10px 20px;
+}
+
+.nav ul#menu {
+    display: flex;
+    gap: 30px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nav ul#menu li a {
+    color: #fff;
+    font-weight: 600;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.nav ul#menu li a:hover{
+    opacity: 0.9;
+    transform: scale(1.02);
+}
+
+#contact_button a {
+    background-color: #B3EF5B;
+    color: #020202;
+    font-size: 24px;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    margin: 40px;
+    transition: 0.3s ease;
+}
+
+#contact_button:hover {
+    opacity: 0.9;
+    transform: scale(1.02);
+}
+
+/* Le footer */
+
+.footer{
+    background-image: url(/ressources_lina/fond_footer.png);
+}
+
+.container_footer{
+    display: flex;
+    gap: 200px;
+    margin-left: 100px;
+}
+.container_footer h3{
+    font-size: 40px;
+    font-weight: 400;
+    text-align: left;
+    font-family: "Indivisible", sans-serif;
+    color: #fff;
+}
+.container_footer h4{
+    font-size: 25px;
+    font-family: "Indivisible", sans-serif;
+    color: #fff;
+}
+.pages, .pages a {
+    font-family: "Indivisible", sans-serif;
+    font-size: 24px;
+    display: flex;
+    color: #fff;
+    text-decoration: none;
+    gap: 50px;
+    align-items: center;
+    justify-content: center;
+    text-align: left !important;
+}
+
+#contact{
+    text-align: end;
+}
+
+.pages a:hover{
+    transition: 0.3s ease;
+    opacity: 0.9;
+    transform: scale(1.02);
+}
+
+.logo_reseaux{
+    display: flex;
+    margin-top: 0px !important;
+}
+
+.reseaux h4{
+    margin-bottom: 0 !important;
+}
+
+/* aller en haut */
+#button_up{
+     position: fixed;
+    bottom: 30px;  
+    right: 30px;    
+    width: 50px;    
+    z-index: 2000;
+    transition: 0.3s ease;
+    mix-blend-mode: difference;
+}
+
+/* mini hero */
+
+.mini_hero {
+    background-image: url(/ressources_lina/fond_mini_hero.png);
+    height: 50vh;
+    background-size: cover;
+    background-position: center;
+    padding-top: 50px;
+    
+}
+
+.dessus {
+    display: flex;
+    font-family: "Av05", sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.35px;
+    color: #fff;
+    gap: 59%;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: -25px;
+    text-align: start;
+
+}
+
+.spé{
+    display: flex;
+}
+
+#graphisme{
+    color: #B3B3B3;
+}
+
+#LM{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Av05", sans-serif;
+    font-weight: 400;
+    font-size: 96px;
+    letter-spacing: 0.35px;
+    color: #fff;
+    margin-top: 100px;
+}
+
+.bas {
+    display: flex;
+    margin-left: 50px;
+    margin-top: 80px;
+    gap: 500px;
+    align-items: center;
+
+}
+.heure{
+    display: flex;
+    font-family: "Av05", sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.35px;
+    color: #fff;
+    gap: 5px;
+    
+}
+
+/* à propos */
+.apropos, .projet {
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.titre{
+    display: flex;
+    font-family: "Av05", sans-serif;
+    color: #B3EF5B;
+    font-weight: 400;
+    letter-spacing: 0.40px;
+    justify-content: space-between;
+    font-size: 50px
+}
+
+.description{
+    display: flex;
+    font-family: "roboto-mono", sans-serif;
+    color: #888888;
+    text-transform: uppercase;
+    font-size: 20px;
+    gap: 175px;
+
+}
+
+/* Les projets */
+
+.explication h3 {
+    font-family: "Av05", sans-serif;
+    color: #fff;
+    font-weight: 400;
+    letter-spacing: 0.40px;
+    font-size: 45px;
+}
+
+.description {
+    display: flex;
+}
+
+
+.context {
+    width: 60%;
+}
+
+.type{
+    width: 40%;
+}
+
+.year, .cat{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid #888888 ;
+}
+
+.white {
+    font-family: "space-grotesk-variable", sans-serif;
+    color: #fff;
+    font-weight: bold;
+}
+
+.photo{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.column{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+.photo_width{
+    align-items: center;
+    width: 100% !important;
+}
+
+#link {
+    display: flex;
+    font-family: "Av05", sans-serif;
+    color: #fff;
+    text-decoration: none;
+    font-size: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+#link:hover{
+     transition: 0.3s ease;
+    opacity: 0.9;
+    transform: scale(1.02);
+    margin-bottom: -10px !important;
+
+}
+
+#click{
+    display: flex;
+    font-family: "roboto-mono", sans-serif;
+    color: #888888;
+    text-transform: uppercase;
+    font-size: 20px;
+     justify-content: center;
+    align-items: center;
+    margin-top: -10px !important;
+}

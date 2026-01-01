@@ -1,0 +1,311 @@
+@font-face {
+    font-family: "body-text-regular";
+    src: url("./font/Body Text Fit Regular.ttf") format("opentype");
+}
+
+@font-face {
+    font-family: "body-text-bold";
+    src: url("./font/body-text-fit-bold.ttf") format("opentype");
+}
+
+
+body{
+    background-color: #EEEEEE;
+}
+
+/*Le header*/
+
+.header { 
+    width: 100%;
+    z-index: 1000;  
+    font-family: "indivisible", sans-serif;
+    background-color: #000129;
+    
+}
+
+.header .container {
+    display: flex;
+    background-color: transparent;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    padding: 10px 20px;
+}
+
+.nav ul#menu {
+    display: flex;
+    gap: 30px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nav ul#menu li a {
+    color: #fff;
+    font-weight: 600;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.nav ul#menu li a:hover{
+    opacity: 0.9;
+    transform: scale(1.02);
+}
+
+#contact_button a {
+    background-color: #fff;
+    color: #F15CA3;
+    font-size: 24px;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    margin: 40px;
+    transition: 0.3s ease;
+}
+
+#contact_button:hover {
+    opacity: 0.9;
+    transform: scale(1.02);
+}
+
+/* Le footer */
+
+.footer{
+    background-image: url(/ressources_lina/fond_footer.png);
+}
+
+.container_footer{
+    display: flex;
+    gap: 200px;
+    margin-left: 100px;
+}
+.container_footer h3{
+    font-size: 40px;
+    font-weight: 400;
+    text-align: left;
+    font-family: "Indivisible", sans-serif;
+    color: #fff;
+}
+.container_footer h4{
+    font-size: 25px;
+    font-family: "Indivisible", sans-serif;
+    color: #fff;
+}
+.pages, .pages a {
+    font-family: "Indivisible", sans-serif;
+    font-size: 24px;
+    display: flex;
+    color: #fff;
+    text-decoration: none;
+    gap: 50px;
+    align-items: center;
+    justify-content: center;
+    text-align: left !important;
+}
+
+#contact{
+    text-align: end;
+}
+
+.pages a:hover{
+    transition: 0.3s ease;
+    opacity: 0.9;
+    transform: scale(1.02);
+}
+
+.logo_reseaux{
+    display: flex;
+    margin-top: 0px !important;
+}
+
+.reseaux h4{
+    margin-bottom: 0 !important;
+}
+
+/* aller en haut */
+#button_up{
+     position: fixed;
+    bottom: 30px;  
+    right: 30px;    
+    width: 50px;    
+    z-index: 2000;
+    transition: 0.3s ease;
+    mix-blend-mode: difference;
+    
+}
+
+/* mini hero */
+
+.mini_hero{
+    background-image: url(/ressources_kaya/fond_mini_hero.png);
+     height: 50vh;
+    background-size: cover;
+    background-position: center;
+    padding-top: 50px;
+}
+
+.nom{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    gap: 10px;
+}
+
+#prenom{
+    font-family: "body-text-bold", sans-serif;
+    font-weight: bold;
+    font-size: 70px;
+    text-transform: uppercase;
+    color: #222222;
+}
+
+#nom{
+    font-family: "baskerville-display-pt", serif;
+    font-size: 70px;
+    color: #222222;
+}
+
+#k{
+    display: flex;
+    justify-content: end;
+    height: 50px;
+    margin-right: 50px;
+    margin-top: 25px;
+    
+}
+
+/* à propos */
+.apropos, .projet {
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 50px;
+}
+
+
+.titre, h2{
+    display: flex;
+    font-family: "body-text-bold", sans-serif;
+    color: #222222;
+    font-size: 50px !important;
+    gap: 15px;
+    align-items: center;
+}
+
+.var{
+    font-family: "baskerville-display-pt", serif;
+    font-size: 50px;
+    color: #68773D;
+
+}
+
+.description{
+    display: flex;
+    font-family: "body-text-regular", sans-serif;
+    color: #222222;
+    text-transform: uppercase;
+    font-size: 20px;
+    gap: 200px;
+
+}
+
+#photo_kaya{
+    width: 425px;
+    position: relative;
+    top: -150px;
+    margin-right: 100px;
+}
+
+/* Les projets */
+
+.titre_projet, h3{
+    display: flex;
+    gap: 10px;
+    color: #F15CA3;
+    font-size: 45px;
+    font-family: "body-text-bold", sans-serif;
+    text-transform: uppercase;
+}
+
+.var_projet{
+    font-family: "baskerville-display-pt", serif !important;
+    font-style: italic;
+}
+
+
+.description {
+    display: flex;
+}
+
+
+.context {
+    width: 60%;
+}
+
+.type{
+    width: 40%;
+}
+
+.year, .cat{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid #222222 ;
+    font-family: "body-text-regular",sans-serif;
+}
+
+.white {
+    font-family: "baskerville-display-pt", serif;
+    color: #68773D;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-style: italic;
+}
+
+.photo{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.column{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+.photo_width{
+    align-items: center;
+    width: 100% !important;
+}
+
+#link {
+    display: flex;
+    font-family: "Av05", sans-serif;
+    color: #fff;
+    text-decoration: none;
+    font-size: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+#link:hover{
+     transition: 0.3s ease;
+    opacity: 0.9;
+    transform: scale(1.02);
+    margin-bottom: -10px !important;
+
+}
+
+#click{
+    display: flex;
+    font-family: "roboto-mono", sans-serif;
+    color: #888888;
+    text-transform: uppercase;
+    font-size: 20px;
+     justify-content: center;
+    align-items: center;
+    margin-top: -10px !important;
+}

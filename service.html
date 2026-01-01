@@ -1,52 +1,171 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Click Agency</title>
     <link rel="stylesheet" href="https://use.typekit.net/koy2mmw.css">
-</head>
-<body>
- 
- <!-- Le header -->
-    <header class="header">
-        <div class="container">
-            <a href="accueil.html" class="logo">
-                <img src="ressources_accueil/logo_svg.svg" alt="Logo Click Agency">
-            </a>
-
-            <nav class="nav">
-                <ul id="menu">
-                    <li><a href="#équipe"> L'équipe</a></li>
-                    <li><a href="apropos.html">À Propos</a></li>
-                    <li><a href="service.html">Services</a></li>
-                </ul>
-
-                <div id="contact_button"><a href="contact.html">CONTACT</a></div>
-            </nav>
-        </div>
-    </header>
-
- <!--Le hero-->
-    <div class="hero">
-        <div class="text_zone">
-            <p>À vous de créer la combinaison qui matche avec votre projet.</p><h1>Toutes nos Expertises, en<br>Solo en Duo ou en Trio.</h1>
-            <p>Nos univers de complètent, et nos services aussi. DA, graphisme, web design et développement web : prenez ce qu’il vous faut !</p>
-            <div class="button_zone">
-                <a href="service.html" class="white_button">Démarrer un projet !</a>
-            </div>
-        </div>
-    </div>
-
- <!--Le bandeau-->
     <style>
-        
-body {
-  margin: 0;
-}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-.bandeau {
+        body {
+            background: #000129;
+            margin: 0;
+        }
+
+        p {
+            font-family: "area-inktrap", sans-serif;
+            font-size: 22px;
+            color: #fff;
+            font-weight: 100;
+        }
+
+        h1 {
+            font-family: "indivisible", sans-serif;
+            font-size: 70px;
+            color: #fff;
+            font-weight: 600;
+        }
+
+        h2 {
+            font-family: "indivisible", sans-serif;
+            font-size: 54px;
+            color: #fff;
+            font-weight: 500;
+        }
+
+        h3 {
+            font-family: "indivisible", sans-serif;
+            font-size: 40px;
+            color: #fff;
+            font-weight: 500;
+        }
+
+
+        /* HEADER */
+        .header {
+            position: fixed;  
+            width: 100%;
+            z-index: 1000;  
+            font-family: "indivisible", sans-serif;
+            background-image: url("/ressources_accueil/fond_header.png");
+        }
+
+        .header .container {
+            display: flex;
+            background-color: transparent;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            padding: 10px 20px;
+        }
+
+        .nav ul#menu {
+            display: flex;
+            gap: 30px;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .nav ul#menu li a {
+            color: #fff;
+            font-weight: 600;
+            font-size: 24px;
+            text-decoration: none;
+        }
+
+        #contact_button a {
+            background-color: #fff;
+            color: #F15CA3;
+            font-size: 24px;
+            font-weight: 600;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 50px;
+            margin: 40px;
+        }
+
+        /* HERO */
+        .hero {
+            background-image: url("/ressources_accueil/Fond_hero.png");
+            height: 100vh;
+            background-size: cover;
+            background-position: center;
+            padding-top: 50px;
+            display: flex;            
+            flex-direction: column;    
+            justify-content: center;   
+            align-items: center; 
+            text-align: center;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 50% 50%, rgba(140, 82, 255, 0.3) 0%, transparent 70%);
+        }
+
+        .text_zone {
+            max-width: 900px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .text_zone p:first-child {
+            font-size: 18px;
+            margin-bottom: 20px;
+            opacity: 0.9;
+        }
+
+        .text_zone h1 {
+            margin-bottom: 30px;
+        }
+
+        .text_zone p:nth-child(3) {
+            font-size: 20px;
+            margin-bottom: 40px;
+            opacity: 0.85;
+        }
+
+        .button_zone {
+            margin-top: 20px;
+        }
+
+        .white_button {
+            color: #000129;
+            text-decoration: none;
+            background-color: #fff;
+            font-size: 20px;
+            font-weight: 600;
+            padding: 15px 40px;
+            border-radius: 50px;
+            font-family: "indivisible", sans-serif;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .white_button:hover {
+            background-color: transparent;
+            color: #fff;
+            border: 2px solid #fff;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(255, 255, 255, 0.2);
+        }
+
+        /* BANDEAU DÉFILANT */
+        .bandeau {
   background-color: #8C52FF;
   overflow: hidden;
   padding: 20px 0;
@@ -79,67 +198,526 @@ font-family: "area-inktrap", sans-serif;
     transform: translateX(-50%);
   }
 }
-</style>
 
-    </head>
-    
-    <body>
-    
-        <div class="bandeau">
-            <div class="bandeau__track">
-              <div class="bandeau__content">
-                <span>Découvrez nos services •</span>
-                <span>Découvrez nos services •</span>
-                <span>Découvrez nos services •</span>
-                <span>Découvrez nos services •</span>
-              </div>
-          
-              <!-- DUPLICATION pour boucle infinie -->
-              <div class="bandeau__content">
-                <span>Découvrez nos services •</span>
-                <span>Découvrez nos services •</span>
-                <span>Découvrez nos services •</span>
-                <span>Découvrez nos services •</span>
-                <span>Découvrez nos services •</span>
-                <span>Découvrez nos services •</span>
-                <span>Découvrez nos services •</span>
-                <span>Découvrez nos services •</span>
-              </div>
+        /* SERVICES */
+        .service_service {
+            min-height: 100vh;
+            background: linear-gradient(180deg, #0a0520 0%, #1a0a3e 30%, #3d1f7a 60%, #8C52FF 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 100px 20px;
+        }
+
+        .box_spe_two {
+            display: flex;
+            gap: 40px;
+            max-width: 1200px;
+            width: 100%;
+            margin-top: 50px;
+        }
+
+        #DA, #graphisme, #web {
+            flex: 1;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 25px;
+            background: rgba(0, 1, 41, 1);
+            backdrop-filter: blur(10px);
+            padding: 50px 30px;
+            text-align: center;
+            transition: all 0.4s ease;
+        }
+
+        #DA:hover, #graphisme:hover, #web:hover {
+            transform: translateY(-10px);
+            border-color: #8C52FF;
+            background: rgba(140, 82, 255, 0.2);
+            box-shadow: 0 20px 60px rgba(140, 82, 255, 0.3);
+        }
+
+        #DA img, #graphisme img, #web img {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 25px;
+        }
+
+        #DA p:first-of-type, #graphisme p:first-of-type, #web p:first-of-type {
+            font-size: 26px;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .description {
+            font-size: 16px;
+            opacity: 0.85;
+            line-height: 1.6;
+        }
+
+        /* SECTION VISION */
+        .vision {
+            padding: 120px 40px;
+            background: linear-gradient(360deg, rgba(0, 1, 41, 1) 0%, #1a0a3e 30%, #3d1f7a 60%, #8C52FF 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .vision__container {
+            display: flex;
+            gap: 80px;
+            max-width: 1200px;
+            margin: 0 auto;
+            align-items: center;
+        }
+
+        .vision__text {
+            flex: 1;
+        }
+
+        .vision__text h1 {
+            margin-bottom: 30px;
+        }
+
+    .vision__text p {
+            font-size: 24px;
+            opacity: 0.8;
+        }
+
+        .vision__card {
+            flex: 1;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 30px;
+            background:rgba(0, 1, 41, 1);
+            padding: 50px;
+            backdrop-filter: blur(10px);
+        }
+
+        .card-item {
+            display: flex;
+            gap: 25px;
+            align-items: flex-start;
+            margin-bottom: 40px;
+        }
+
+        .card-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .card-item img {
+            width: 70px;
+            height: 70px;
+            flex-shrink: 0;
+            border-radius: 15px;
+        }
+
+        .card-item h3 {
+            margin: 0 0 12px 0;
+            font-size: 28px;
+        }
+
+        .card-item p {
+            margin: 0;
+            font-size: 16px;
+            opacity: 0.8;
+        }
+
+        /* SECTION DESIGN */
+        .design {
+            padding: 120px 40px;
+            background: rgba(0, 1, 41, 1);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .design__container {
+            display: flex;
+            gap: 80px;
+            max-width: 1200px;
+            margin: 0 auto;
+            align-items: center;
+            flex-direction: row-reverse;
+        }
+
+        .design__text {
+            flex: 1;
+            text-align: right;
+        }
+
+        .design__text h2 {
+            margin-bottom: 30px;
+        }
+
+        .design__text p {
+            font-size: 20px;
+            opacity: 0.8;
+        }
+
+        .design__card {
+            flex: 1;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 30px;
+            background: rgba(0, 1, 41, 1);
+            padding: 50px;
+            backdrop-filter: blur(10px);
+        }
+
+        /* SECTION WEB */
+        .web-section {
+            padding: 120px 40px;
+            background: rgba(0, 1, 41, 1);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .web__container {
+            display: flex;
+            gap: 80px;
+            max-width: 1200px;
+            margin: 0 auto;
+            align-items: center;
+        }
+
+        .web__text {
+            flex: 1;
+        }
+
+        .web__text h2 {
+            margin-bottom: 30px;
+        }
+
+        .web__text p {
+            font-size: 20px;
+            opacity: 0.8;
+        }
+
+        .web__card {
+            flex: 1;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 30px;
+            background: rgba(0, 1, 41, 1);
+            padding: 50px;
+            backdrop-filter: blur(10px);
+        }
+
+        /* TARIFS */
+        .tarifs {
+            padding: 120px 40px;
+            background-image: url("ressources_services/bg tarifs.png") ;
+            background-position: center;
+            background-repeat: no-repeat;
+            padding-left: 140px;
+        }
+
+        .tarifs h2 {
+            margin-bottom: 80px;
+        }
+
+        .tarifs__container {
+            display: flex;
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+            justify-content: center;
+        }
+
+        .tarif-card {
+            flex: 1;
+            max-width: 350px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 30px;
+            padding: 50px 40px;
+            background: rgba(0, 1, 41, 1);
+            transition: all 0.4s ease;
+        }
+
+        .tarif-card.featured {
+            background-color: #8C52FF;
+            transform: scale(1.05);
+        }
+
+        .tarif-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            border-color: #8C52FF;
+        }
+
+        .tarif-card h3 {
+            margin-bottom: 15px;
+            font-size: 36px;
+        }
+
+        .tarif-card .subtitle {
+            font-size: 16px;
+            opacity: 0.7;
+            margin-bottom: 30px;
+        }
+
+        .tarif-card .price {
+            font-size: 48px;
+            font-weight: 700;
+            margin: 30px 0;
+        }
+
+        .tarif-card .btn {
+            display: inline-block;
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-family: "indivisible", sans-serif;
+            font-weight: 600;
+            font-size: 18px;
+            transition: all 0.3s ease;
+        }
+
+        .tarif-card:not(.featured) .btn {
+            background: transparent;
+            color: #fff;
+            border: 2px solid #fff;
+        }
+
+        .tarif-card:not(.featured) .btn:hover {
+            background: #fff;
+            color: #000129;
+        }
+
+        .tarif-card.featured .btn {
+            background: #fff;
+            color: #8C52FF;
+        }
+
+        .tarif-card.featured .btn:hover {
+            background: transparent;
+            color: #fff;
+            border: 2px solid #fff;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 1024px) {
+            h1 {
+                font-size: 50px;
+            }
+
+            .box_spe_two {
+                flex-direction: column;
+            }
+
+            .vision__container,
+            .design__container,
+            .web__container {
+                flex-direction: column;
+            }
+
+            .tarifs__container {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container">
+            <a href="accueil.html" class="logo">
+                <img src="ressources_accueil/logo_svg.svg" alt="Logo Click Agency">
+            </a>
+            <nav class="nav">
+                <ul id="menu">
+                    <li><a href="#équipe">L'équipe</a></li>
+                    <li><a href="apropos.html">À Propos</a></li>
+                    <li><a href="service.html">Services</a></li>
+                </ul>
+                <div id="contact_button"><a href="contact.html">CONTACT</a></div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <div class="hero">
+        <div class="text_zone">
+            <p>À vous de créer la combinaison qui matche avec votre projet.</p>
+            <h1>Toutes nos Expertises, en<br>Solo en Duo ou en Trio.</h1>
+            <p>Nos univers se complètent, et nos services aussi. DA, graphisme, web design et développement web : prenez ce qu'il vous faut !</p>
+            <div class="button_zone">
+                <a href="service.html" class="white_button">Démarrer un projet !</a>
             </div>
-        </div>   
-          
-          <!--service-->
-        <div class="service_service">
-            <div class="box_spe_two">
-                <div id="DA">
-                    <img src="ressources_accueil/DA.svg" alt="Logo Direction Artistique">
-                    <p>Direction Artistique</p>
-                    <p class="description">Kaya Samper transforme les idées en univers visuels cohérents et percutants. De la conception d’identité, à la vision globale d’un projet.</p>
+        </div>
+    </div>
+
+    <!-- BANDEAU -->
+    <div class="bandeau">
+      <div class="bandeau__track">
+        <div class="bandeau__content">
+          <span>Découvrez nos services •</span>
+          <span>Découvrez nos services •</span>
+          <span>Découvrez nos services •</span>
+          <span>Découvrez nos services •</span>
+        </div>
+    
+        <!-- DUPLICATION pour boucle infinie -->
+        <div class="bandeau__content">
+          <span>Découvrez nos services •</span>
+          <span>Découvrez nos services •</span>
+          <span>Découvrez nos services •</span>
+          <span>Découvrez nos services •</span>
+          <span>Découvrez nos services •</span>
+          <span>Découvrez nos services •</span>
+          <span>Découvrez nos services •</span>
+          <span>Découvrez nos services •</span>
+        </div>
+      </div>
+  </div>
+
+    <!-- SERVICES -->
+    <div class="service_service">
+        <div class="box_spe_two">
+            <div id="DA">
+                <img src="ressources_accueil/DA.svg" alt="Logo Direction Artistique">
+                <p>Direction Artistique</p>
+                <p class="description">Kaya Samper transforme les idées en univers visuels cohérents et percutants. De la conception d'identité à la vision globale d'un projet.</p>
+            </div>
+            <div id="graphisme">
+                <img src="ressources_accueil/graphisme.svg" alt="Logo graphisme">
+                <p>Design Graphique</p>
+                <p class="description">Carolina Leclercq donne vie aux concepts avec créativité et précision. Logos, supports print ou contenus digitaux.</p>
+            </div>
+            <div id="web">
+                <img src="ressources_accueil/web.svg" alt="Logo Webdesign">
+                <p>Webdesign + développement Web</p>
+                <p class="description">Lina Mebrak allie design et technique pour créer des sites web fonctionnels, esthétiques et intuitifs.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- SECTION VISION -->
+    <section class="vision">
+        <div class="vision__container">
+            <div class="vision__text">
+                <h1>Donner une Vision, Créer une Identité</h1>
+                <p>Avec notre directrice artistique,<br>Kaya Samper.</p>
+            </div>
+            <div class="vision__card">
+                <div class="card-item">
+                    <img src="ressources_services/palette.svg" alt="Palette">
+                    <div>
+                        <h3><strong>Identité visuelle</strong></h3>
+                        <p>Créations d'identité visuelle sur mesure pour votre marque.</p>
+                    </div>
                 </div>
-                <div id="graphisme">
-                    <img src="ressources_accueil/graphisme.svg" alt="Logo graphisme">
-                    <p>Design Graphique</p>
-                    <p class="description">Carolina Leclercq donne vie au concepts avec créativité et précision. Logos, supports print ou cotenus digitaux.</p>
+                <div class="card-item">
+                    <img src="ressources_services/dossier.png" alt="Chartes">
+                    <div>
+                        <h3><strong>Chartes graphiques</strong></h3>
+                        <p>Moodboard et chartes graphiques complètes.</p>
+                    </div>
                 </div>
-                <div id="web">
-                    <img src="ressources_accueil/web.svg" alt="Logo Webdesign">
-                    <p>Webdesign + développement Web</p>
-                    <p class="description">Lina Mebrak alie design et technique pour créer des sites web fonctionnels, esthétiques et intuitifs.</p>
+                <div class="card-item">
+                    <img src="ressources_services/ampoule.png" alt="Campagnes">
+                    <div>
+                        <h3><strong>Campagnes créatives</strong></h3>
+                        <p>Conception de campagnes créatives impactantes.</p>
+                    </div>
                 </div>
             </div>
         </div>
-    </body>
+    </section>
 
-<!--Les parties-->
-  <div class="parties">
-    <div class="zone_text">
-      <h1>Donner une Vision, Créer une Identité</h1><p>Avec notre directrice artistique, Kaya Samper.</p>
-    </div>
-    <div id="graphisme">
-      <img src="ressources_services/palette.svg" alt="picto palette">
-      <p>Identité visuelle</p>
-      <p class="description">Créations d’identité visuelle (logo, couleurs, typographie ...).</p>
-    </div>
+    <!-- SECTION DESIGN -->
+    <section class="design">
+        <div class="design__container">
+            <div class="design__text">
+                <h1>Donner vie aux Idées par le Design</h1><br>
+                <p>Avec notre graphiste<br>Carolina Leclercq.</p>
+            </div>
+            <div class="design__card">
+                <div class="card-item">
+                    <img src="ressources_services/support print.png" alt="Print">
+                    <div>
+                        <h3><strong>Supports print</strong></h3>
+                        <p>Création de supports print percutants : flyers, affiches, brochures.</p>
+                    </div>
+                </div>
+                <div class="card-item">
+                    <img src="ressources_services/contenue-digitaux.png" alt="Digital">
+                    <div>
+                        <h3><strong>Contenus digitaux</strong></h3>
+                        <p>Créations de supports et contenus digitaux (visuels réseaux sociaux).</p>
+                    </div>
+                </div>
+                <div class="card-item">
+                    <img src="ressources_services/illustrations.png" alt="Illustrations">
+                    <div>
+                        <h3><strong>Illustrations</strong></h3>
+                        <p>Illustrations et iconographies sur mesure.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- SECTION WEB -->
+    <section class="web-section">
+        <div class="web__container">
+            <div class="web__text">
+                <h1>Allier design et technique pour vos projets digitaux.</h1><br>
+                <p>Avec notre web designer et développeuse<br>Lina Mebrak.</p>
+            </div>
+            <div class="web__card">
+                <div class="card-item">
+                    <img src="ressources_services/maquettage.png" alt="Maquettage">
+                    <div>
+                        <h3><strong>Maquettage</strong></h3>
+                        <p>Conception et design de site web sur mesure en collaboration avec le client.</p>
+                    </div>
+                </div>
+                <div class="card-item">
+                    <img src="ressources_services/dev.png" alt="Développement">
+                    <div>
+                        <h3><strong>Développement</strong></h3>
+                        <p>Application web et mobile responsive (front-end et back-end) à les écrans.</p>
+                    </div>
+                </div>
+                <div class="card-item">
+                    <img src="ressources_services/maintenance.png" alt="Maintenance">
+                    <div>
+                        <h3><strong>Maintenance</strong></h3>
+                        <p>Maintenance et mise à jour de vos sites existants.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- TARIFS -->
+    <section class="tarifs">
+        <h2><strong>Nos tarifs</strong></h2>
+        <div class="tarifs__container">
+            <div class="tarif-card">
+                <h3>Pack Solo</h3>
+                <p class="subtitle">Pour un seul pôle</p>
+                <p>Une seule spécialité à votre service pour des besoins ciblés.</p>
+                <p class="price">500€ - 1000€</p>
+                <a href="#" class="btn">Commencer !</a>
+            </div>
 
+            <div class="tarif-card featured">
+                <h3>Pack Trio</h3>
+                <p class="subtitle">Notre pack le plus complet</p>
+                <p>Le pack trio rassemble nos trois expertises pour une expérience client complète.</p>
+                <p class="price">2500€ - 5000€</p>
+                <a href="#" class="btn">Commencer !</a>
+            </div>
+
+            <div class="tarif-card">
+                <h3>Pack Duo</h3>
+                <p class="subtitle">Pour deux pôles combinés</p>
+                <p>Vous qui combine de vos services pour une approche plus complète.</p>
+                <p class="price">1200€ - 2500€</p>
+                <a href="#" class="btn">Commencer !</a>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

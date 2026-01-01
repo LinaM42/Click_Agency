@@ -1,31 +1,195 @@
+<<<<<<< Updated upstream
 /*Général*/
 
 body {
     background: #000129;
     margin: 0;
+=======
+ * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #000129;
+            margin: 0;
+        }
+
+        p {
+            font-family: "area-inktrap", sans-serif;
+            font-size: 22px;
+            color: #fff;
+            font-weight: 100;
+        }
+
+        h1 {
+            font-family: "indivisible", sans-serif;
+            font-size: 70px;
+            color: #fff;
+            font-weight: 600;
+        }
+
+        h2 {
+            font-family: "indivisible", sans-serif;
+            font-size: 54px;
+            color: #fff;
+            font-weight: 500;
+        }
+
+        h3 {
+            font-family: "indivisible", sans-serif;
+            font-size: 40px;
+            color: #fff;
+            font-weight: 500;
+        }
+
+
+        /* HEADER */
+        .header {
+            position: fixed;  
+            width: 100%;
+            z-index: 1000;  
+            font-family: "indivisible", sans-serif;
+            background-image: url("/ressources_accueil/fond_header.png");
+        }
+
+        .header .container {
+            display: flex;
+            background-color: transparent;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            padding: 10px 20px;
+        }
+
+        .nav ul#menu {
+            display: flex;
+            gap: 30px;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .nav ul#menu li a {
+            color: #fff;
+            font-weight: 600;
+            font-size: 24px;
+            text-decoration: none;
+        }
+
+        #contact_button a {
+            background-color: #fff;
+            color: #F15CA3;
+            font-size: 24px;
+            font-weight: 600;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 50px;
+            margin: 40px;
+        }
+
+        /* HERO */
+        .hero {
+            background-image: url("/ressources_accueil/Fond_hero.png");
+            height: 100vh;
+            background-size: cover;
+            background-position: center;
+            padding-top: 50px;
+            display: flex;            
+            flex-direction: column;    
+            justify-content: center;   
+            align-items: center; 
+            text-align: center;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 50% 50%, rgba(140, 82, 255, 0.3) 0%, transparent 70%);
+        }
+
+        .text_zone {
+            max-width: 900px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .text_zone p:first-child {
+            font-size: 18px;
+            margin-bottom: 20px;
+            opacity: 0.9;
+        }
+
+        .text_zone h1 {
+            margin-bottom: 30px;
+        }
+
+        .text_zone p:nth-child(3) {
+            font-size: 20px;
+            margin-bottom: 40px;
+            opacity: 0.85;
+        }
+
+        .button_zone {
+            margin-top: 20px;
+        }
+
+        .white_button {
+            color: #000129;
+            text-decoration: none;
+            background-color: #fff;
+            font-size: 20px;
+            font-weight: 600;
+            padding: 15px 40px;
+            border-radius: 50px;
+            font-family: "indivisible", sans-serif;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .white_button:hover {
+            background-color: transparent;
+            color: #fff;
+            border: 2px solid #fff;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(255, 255, 255, 0.2);
+        }
+
+        /* BANDEAU DÉFILANT */
+        .bandeau {
+  background-color: #8C52FF;
+  overflow: hidden;
+  padding: 20px 0;
+>>>>>>> Stashed changes
 }
 
-p {
-    font-family: "area-inktrap", sans-serif;
-    font-size: 22px;
-    color: #fff;
-    font-weight: 100;
+.bandeau__track {
+  display: flex;
+  width: max-content;
+  animation: defilement 12s linear infinite;
 }
 
-h1 {
-    font-family: "indivisible", sans-serif;
-    font-size: 70px;
-    color: #fff;
-    font-weight: 600;
+.bandeau__content {
+  display: flex;
 }
 
-h2 {
-    font-family: "indivisible", sans-serif;
-    font-size: 54px;
-    color: #fff;
-    font-weight: 500;
+.bandeau__content span {
+font-family: "area-inktrap", sans-serif;
+  color: white;
+  font-size: 1.5rem;
+  white-space: nowrap;
+  margin-right: 0.30rem;
 }
 
+<<<<<<< Updated upstream
 h3 {
     font-family: "indivisible", sans-serif;
     font-size: 40px;
@@ -57,19 +221,30 @@ h3 {
     gap: 30px;
     position: absolute;
     left: 50%;
+=======
+/* animation CONTINUE, sans attente */
+@keyframes defilement {
+  from {
+    transform: translateX(0);
+  }
+  to {
+>>>>>>> Stashed changes
     transform: translateX(-50%);
-    margin: 0;
-    padding: 0;
-    list-style: none;
+  }
 }
 
-.nav ul#menu li a {
-    color: #fff;
-    font-weight: 600;
-    font-size: 24px;
-    text-decoration: none;
-}
+        /* SERVICES */
+        .service_service {
+            min-height: 100vh;
+            background: linear-gradient(180deg, #0a0520 0%, #1a0a3e 30%, #3d1f7a 60%, #8C52FF 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 100px 20px;
+        }
 
+<<<<<<< Updated upstream
 .nav ul#menu li a:hover{
     opacity: 0.9;
     transform: scale(1.02);
@@ -151,29 +326,47 @@ h3 {
     background-size: cover;
     background-position: center;
     padding-top: 50px;
+=======
+        .box_spe_two {
+            display: flex;
+            gap: 40px;
+            max-width: 1200px;
+            width: 100%;
+            margin-top: 50px;
+        }
 
-    display: flex;            
-    flex-direction: column;    
-    justify-content: center;   
-    align-items: center; 
-    text-align: center;
-}
+        #DA, #graphisme, #web {
+            flex: 1;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 25px;
+            background: rgba(0, 1, 41, 0.4);
+            backdrop-filter: blur(10px);
+            padding: 50px 30px;
+            text-align: center;
+            transition: all 0.4s ease;
+        }
+>>>>>>> Stashed changes
 
-.text_zone {
-width: 75%;
-}
+        #DA:hover, #graphisme:hover, #web:hover {
+            transform: translateY(-10px);
+            border-color: #8C52FF;
+            background: rgba(140, 82, 255, 0.2);
+            box-shadow: 0 20px 60px rgba(140, 82, 255, 0.3);
+        }
 
-.white_button {
-    color: #000129;
-    text-decoration: none;
-    background-color: #fff;
-    font-size: 20px;
-    padding: 10px 20px;
-    border-radius: 50px;
-    font-family: "indivisible", sans-serif;
-    margin-right: 20px;
-}
+        #DA img, #graphisme img, #web img {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 25px;
+        }
 
+        #DA p:first-of-type, #graphisme p:first-of-type, #web p:first-of-type {
+            font-size: 26px;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+<<<<<<< Updated upstream
 .white_button:hover {
     color: #fff;
     text-decoration: none;
@@ -186,20 +379,32 @@ width: 75%;
     transition: 0.3s ease;
     opacity: 0.9;
     transform: scale(1.02);
+=======
+        .description {
+            font-size: 16px;
+            opacity: 0.85;
+            line-height: 1.6;
+        }
+>>>>>>> Stashed changes
 
-}
+        /* SECTION VISION */
+        .vision {
+            padding: 120px 40px;
+            background-color: #000129;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
 
-.trans_button {
-    color: #fff;
-    text-decoration: none;
-    background-color: transparent;
-    font-size: 20px;
-    padding: 10px 20px;
-    border-radius: 50px;
-    font-family: "indivisible", sans-serif;
-    border: 2px solid #fff;
-}
+        .vision__container {
+            display: flex;
+            gap: 80px;
+            max-width: 1200px;
+            margin: 0 auto;
+            align-items: center;
+        }
 
+<<<<<<< Updated upstream
 .trans_button:hover {
     color: #000129;
     text-decoration: none;
@@ -212,43 +417,49 @@ width: 75%;
     opacity: 0.9;
     transform: scale(1.02);
 }
+=======
+        .vision__text {
+            flex: 1;
+        }
+>>>>>>> Stashed changes
 
-.button_zone {
-    margin-top: 50px;
-    margin-bottom: 75px;
-}
+        .vision__text h1 {
+            margin-bottom: 30px;
+        }
 
-.accueil_apropos {
-    background-image: url(/ressources_accueil/fond_apropos_accueil.png);
-    height: 100vh;
-    background-size: cover;
-    background-position: center;
-    
+    .vision__text p {
+            font-size: 24px;
+            opacity: 0.8;
+        }
 
-    display: flex;            
-    flex-direction: column;    
-    justify-content: center;   
-    align-items: center; 
-    text-align: center;
-}
+        .vision__card {
+            flex: 1;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 30px;
+            background: linear-gradient(135deg, rgba(140, 82, 255, 0.15), rgba(140, 82, 255, 0.05));
+            padding: 50px;
+            backdrop-filter: blur(10px);
+        }
 
-.service_accueil {
-    background-image: url(/ressources_accueil/fond_service_accueil.png);
-    height: 100vh;
-    background-size: cover;
-    background-position: center;
+        .card-item {
+            display: flex;
+            gap: 25px;
+            align-items: flex-start;
+            margin-bottom: 40px;
+        }
 
-    display: flex;            
-    flex-direction: column;    
-    justify-content: center;   
-    align-items: center; 
-    text-align: center;
-}
+        .card-item:last-child {
+            margin-bottom: 0;
+        }
 
-.description {
-    font-size: 16px;
-}
+        .card-item img {
+            width: 70px;
+            height: 70px;
+            flex-shrink: 0;
+            border-radius: 15px;
+        }
 
+<<<<<<< Updated upstream
 #DA, #graphisme, #web {
     border: 1px solid rgba(255, 255, 255, 0.4);
     border-radius: 20px;
@@ -264,26 +475,42 @@ width: 75%;
     margin-top: 30px;
     width: 75%;
 }
+=======
+        .card-item h3 {
+            margin: 0 0 12px 0;
+            font-size: 28px;
+        }
 
-.équipe {
-    background-image: url(/ressources_accueil/fond_equipe.png);
-    height: 100vh;
-    background-size: cover;
-    background-position: center;
+        .card-item p {
+            margin: 0;
+            font-size: 16px;
+            opacity: 0.8;
+        }
+>>>>>>> Stashed changes
 
-    display: flex;            
-    flex-direction: column;    
-    justify-content: center;   
-    align-items: center; 
-    text-align: center;
-}
+        /* SECTION DESIGN */
+        .design {
+            padding: 120px 40px;
+            background: linear-gradient(180deg, #000129 0%, #0a0520 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
 
-.photos{
-    display: flex;
-    flex-direction: row; 
-    gap: 20px; 
-}
+        .design__container {
+            display: flex;
+            gap: 80px;
+            max-width: 1200px;
+            margin: 0 auto;
+            align-items: center;
+            flex-direction: row-reverse;
+        }
 
+        .design__text {
+            flex: 1;
+        }
+
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 .hero_services{
     background-image: url("/ressources_services/Fond_hero.png");
@@ -448,22 +675,44 @@ input, textarea {
     background-size: cover;
     background-position: center;
     background: linear-gradient(180deg, #0a0520 0%, #1a0a3e 30%, #3d1f7a 60%, #8C52FF 100%);
+=======
+        .design__text h2 {
+            margin-bottom: 30px;
+        }
 
+        .design__text p {
+            font-size: 20px;
+            opacity: 0.8;
+        }
+>>>>>>> Stashed changes
 
-    display: flex;            
-    flex-direction: column;    
-    justify-content: center;   
-    align-items: center; 
-    text-align: center;
-}
+        .design__card {
+            flex: 1;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 30px;
+            background: linear-gradient(135deg, rgba(241, 92, 163, 0.15), rgba(241, 92, 163, 0.05));
+            padding: 50px;
+            backdrop-filter: blur(10px);
+        }
 
-.box_spe_two {
-    display: flex;
-    gap: 50px;
-    margin-top: 30px;
-    width: 75%;
-}
+        /* SECTION WEB */
+        .web-section {
+            padding: 120px 40px;
+            background: linear-gradient(180deg, #0a0520 0%, #1a0a3e 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
 
+        .web__container {
+            display: flex;
+            gap: 80px;
+            max-width: 1200px;
+            margin: 0 auto;
+            align-items: center;
+        }
+
+<<<<<<< Updated upstream
 .zone_text{
     width: 50%;
 }
@@ -614,3 +863,137 @@ body {
  
 
 >>>>>>> 201ec91ed7d37c83eec3cf672c197fb215f5ca69
+=======
+        .web__text {
+            flex: 1;
+        }
+
+        .web__text h2 {
+            margin-bottom: 30px;
+        }
+
+        .web__text p {
+            font-size: 20px;
+            opacity: 0.8;
+        }
+
+        .web__card {
+            flex: 1;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 30px;
+            background: linear-gradient(135deg, rgba(140, 82, 255, 0.15), rgba(140, 82, 255, 0.05));
+            padding: 50px;
+            backdrop-filter: blur(10px);
+        }
+
+        /* TARIFS */
+        .tarifs {
+            padding: 120px 40px;
+            background: #000129;
+            padding-left: 140px;
+        }
+
+        .tarifs h2 {
+            margin-bottom: 80px;
+        }
+
+        .tarifs__container {
+            display: flex;
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+            justify-content: center;
+        }
+
+        .tarif-card {
+            flex: 1;
+            max-width: 350px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 30px;
+            padding: 50px 40px;
+            background: rgba(0, 1, 41, 0.5);
+            transition: all 0.4s ease;
+        }
+
+        .tarif-card.featured {
+            background-color: #8C52FF;
+            transform: scale(1.05);
+        }
+
+        .tarif-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            border-color: #8C52FF;
+        }
+
+        .tarif-card h3 {
+            margin-bottom: 15px;
+            font-size: 36px;
+        }
+
+        .tarif-card .subtitle {
+            font-size: 16px;
+            opacity: 0.7;
+            margin-bottom: 30px;
+        }
+
+        .tarif-card .price {
+            font-size: 48px;
+            font-weight: 700;
+            margin: 30px 0;
+        }
+
+        .tarif-card .btn {
+            display: inline-block;
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-family: "indivisible", sans-serif;
+            font-weight: 600;
+            font-size: 18px;
+            transition: all 0.3s ease;
+        }
+
+        .tarif-card:not(.featured) .btn {
+            background: transparent;
+            color: #fff;
+            border: 2px solid #fff;
+        }
+
+        .tarif-card:not(.featured) .btn:hover {
+            background: #fff;
+            color: #000129;
+        }
+
+        .tarif-card.featured .btn {
+            background: #fff;
+            color: #8C52FF;
+        }
+
+        .tarif-card.featured .btn:hover {
+            background: transparent;
+            color: #fff;
+            border: 2px solid #fff;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 1024px) {
+            h1 {
+                font-size: 50px;
+            }
+
+            .box_spe_two {
+                flex-direction: column;
+            }
+
+            .vision__container,
+            .design__container,
+            .web__container {
+                flex-direction: column;
+            }
+
+            .tarifs__container {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+>>>>>>> Stashed changes

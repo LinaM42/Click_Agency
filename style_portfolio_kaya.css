@@ -68,23 +68,28 @@ body {
   transform: scale(1.02);
 }
 
-/* Le footer */
-.footer {
-  background-image: url(/ressources_lina/fond_footer.png);
+ /* FOOTER */
+ .footer {
+  width: 100%;
+  background-image: url("/ressources_accueil/fond_footer.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 20px;
 }
 
 .container_footer {
   display: flex;
   gap: 200px;
-  margin-left: 100px;
+  margin-left: 50px;
 }
 
-.container_footer h3 {
+.container_footer h5 {
   font-size: 40px;
-  font-weight: 400;
   text-align: left;
   font-family: "Indivisible", sans-serif;
   color: #fff;
+  font-weight: 500;
 }
 
 .container_footer h4 {
@@ -93,16 +98,23 @@ body {
   color: #fff;
 }
 
-.pages, .pages a {
+.pages {
+  display: flex;
+  gap: 65px;
+}
+
+.pages > div {
+  display: flex;
+  flex-direction: column;
+  padding-top: 50px;
+}
+
+.pages a {
   font-family: "Indivisible", sans-serif;
   font-size: 24px;
-  display: flex;
   color: #fff;
   text-decoration: none;
-  gap: 50px;
-  align-items: center;
-  justify-content: center;
-  text-align: left !important;
+  transition: 0.3s ease;
 }
 
 #contact {
@@ -122,7 +134,9 @@ body {
 
 .reseaux h4 {
   margin-bottom: 0 !important;
+  padding-top: 20px;
 }
+
 
 /* aller en haut */
 #button_up {

@@ -6,6 +6,7 @@
     <title>Click Agency</title>
     <link rel="stylesheet" href="https://use.typekit.net/koy2mmw.css">
     <style>
+        /* RESET & BASE */
         * {
             margin: 0;
             padding: 0;
@@ -15,8 +16,10 @@
         body {
             background: #000129;
             margin: 0;
+            color: #fff;
         }
 
+        /* TYPOGRAPHIE */
         p {
             font-family: "area-inktrap", sans-serif;
             font-size: 22px;
@@ -40,27 +43,24 @@
 
         h3 {
             font-family: "indivisible", sans-serif;
-            font-size: 40px;
+            font-size: 28px;
             color: #fff;
             font-weight: 500;
         }
 
-
         /* HEADER */
         .header {
-            position: fixed;  
+            position: fixed;
             width: 100%;
-            z-index: 1000;  
+            z-index: 1000;
             font-family: "indivisible", sans-serif;
             background-image: url("/ressources_accueil/fond_header.png");
         }
 
         .header .container {
             display: flex;
-            background-color: transparent;
             align-items: center;
             justify-content: space-between;
-            position: relative;
             padding: 10px 20px;
         }
 
@@ -70,8 +70,6 @@
             position: absolute;
             left: 50%;
             transform: translateX(-50%);
-            margin: 0;
-            padding: 0;
             list-style: none;
         }
 
@@ -99,21 +97,18 @@
             height: 100vh;
             background-size: cover;
             background-position: center;
-            padding-top: 50px;
-            display: flex;            
-            flex-direction: column;    
-            justify-content: center;   
-            align-items: center; 
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             text-align: center;
+            position: relative;
         }
 
         .hero::before {
             content: '';
             position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
+            inset: 0;
             background: radial-gradient(circle at 50% 50%, rgba(140, 82, 255, 0.3) 0%, transparent 70%);
         }
 
@@ -139,10 +134,7 @@
             opacity: 0.85;
         }
 
-        .button_zone {
-            margin-top: 20px;
-        }
-
+        /* BOUTTONS */
         .white_button {
             color: #000129;
             text-decoration: none;
@@ -166,38 +158,33 @@
 
         /* BANDEAU DÉFILANT */
         .bandeau {
-  background-color: #8C52FF;
-  overflow: hidden;
-  padding: 20px 0;
-}
+            background-color: #8C52FF;
+            overflow: hidden;
+            padding: 20px 0;
+        }
 
-.bandeau__track {
-  display: flex;
-  width: max-content;
-  animation: defilement 12s linear infinite;
-}
+        .bandeau__track {
+            display: flex;
+            width: max-content;
+            animation: defilement 12s linear infinite;
+        }
 
-.bandeau__content {
-  display: flex;
-}
+        .bandeau__content {
+            display: flex;
+        }
 
-.bandeau__content span {
-font-family: "area-inktrap", sans-serif;
-  color: white;
-  font-size: 1.5rem;
-  white-space: nowrap;
-  margin-right: 0.30rem;
-}
+        .bandeau__content span {
+            font-family: "area-inktrap", sans-serif;
+            color: white;
+            font-size: 1.5rem;
+            white-space: nowrap;
+            margin-right: 0.30rem;
+        }
 
-/* animation CONTINUE, sans attente */
-@keyframes defilement {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
-  }
-}
+        @keyframes defilement {
+            from { transform: translateX(0); }
+            to { transform: translateX(-50%); }
+        }
 
         /* SERVICES */
         .service_service {
@@ -218,52 +205,50 @@ font-family: "area-inktrap", sans-serif;
             margin-top: 50px;
         }
 
-        #DA, #graphisme, #web {
+        .service-card {
             flex: 1;
             border: 2px solid rgba(255, 255, 255, 0.3);
             border-radius: 25px;
             background: rgba(0, 1, 41, 1);
-            backdrop-filter: blur(10px);
             padding: 50px 30px;
             text-align: center;
             transition: all 0.4s ease;
         }
 
-        #DA:hover, #graphisme:hover, #web:hover {
+        .service-card:hover {
             transform: translateY(-10px);
             border-color: #8C52FF;
             background: rgba(140, 82, 255, 0.2);
             box-shadow: 0 20px 60px rgba(140, 82, 255, 0.3);
         }
 
-        #DA img, #graphisme img, #web img {
+        .service-card img {
             width: 80px;
             height: 80px;
             margin-bottom: 25px;
         }
 
-        #DA p:first-of-type, #graphisme p:first-of-type, #web p:first-of-type {
+        .service-card .title {
             font-size: 26px;
             font-weight: 600;
             margin-bottom: 15px;
         }
 
-        .description {
+        .service-card .description {
             font-size: 16px;
             opacity: 0.85;
             line-height: 1.6;
         }
 
-        /* SECTION VISION */
-        .vision {
+        /* LAYOUT RÉUTILISABLE POUR SECTIONS (Vision, Design, Web) */
+        .section-layout {
             padding: 120px 40px;
-            background: linear-gradient(360deg, rgba(0, 1, 41, 1) 0%, #1a0a3e 30%, #3d1f7a 60%, #8C52FF 100%);
             min-height: 100vh;
             display: flex;
             align-items: center;
         }
 
-        .vision__container {
+        .section-layout__container {
             display: flex;
             gap: 80px;
             max-width: 1200px;
@@ -271,28 +256,36 @@ font-family: "area-inktrap", sans-serif;
             align-items: center;
         }
 
-        .vision__text {
+        .section-layout--reverse .section-layout__container {
+            flex-direction: row-reverse;
+        }
+
+        .section-layout__text {
             flex: 1;
         }
 
-        .vision__text h1 {
+        .section-layout--reverse .section-layout__text {
+            text-align: right;
+        }
+
+        .section-layout__text h1 {
             margin-bottom: 30px;
         }
 
-    .vision__text p {
+        .section-layout__text p {
             font-size: 24px;
             opacity: 0.8;
         }
 
-        .vision__card {
+        .section-layout__card {
             flex: 1;
             border: 2px solid rgba(255, 255, 255, 0.3);
             border-radius: 30px;
-            background:rgba(0, 1, 41, 1);
+            background: rgba(0, 1, 41, 1);
             padding: 50px;
-            backdrop-filter: blur(10px);
         }
 
+        /* CARD ITEMS (utilisé dans toutes les sections) */
         .card-item {
             display: flex;
             gap: 25px;
@@ -313,7 +306,6 @@ font-family: "area-inktrap", sans-serif;
 
         .card-item h3 {
             margin: 0 0 12px 0;
-            font-size: 28px;
         }
 
         .card-item p {
@@ -322,97 +314,29 @@ font-family: "area-inktrap", sans-serif;
             opacity: 0.8;
         }
 
-        /* SECTION DESIGN */
-        .design {
-            padding: 120px 40px;
+        /* BACKGROUNDS SPÉCIFIQUES */
+        .vision {
+            background: linear-gradient(360deg, rgba(0, 1, 41, 1) 0%, #1a0a3e 30%, #3d1f7a 60%, #8C52FF 100%);
+        }
+
+        .design, .web-section {
             background: rgba(0, 1, 41, 1);
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-        }
-
-        .design__container {
-            display: flex;
-            gap: 80px;
-            max-width: 1200px;
-            margin: 0 auto;
-            align-items: center;
-            flex-direction: row-reverse;
-        }
-
-        .design__text {
-            flex: 1;
-            text-align: right;
-        }
-
-        .design__text h2 {
-            margin-bottom: 30px;
-        }
-
-        .design__text p {
-            font-size: 20px;
-            opacity: 0.8;
-        }
-
-        .design__card {
-            flex: 1;
-            border: 2px solid rgba(255, 255, 255, 0.3);
-            border-radius: 30px;
-            background: rgba(0, 1, 41, 1);
-            padding: 50px;
-            backdrop-filter: blur(10px);
-        }
-
-        /* SECTION WEB */
-        .web-section {
-            padding: 120px 40px;
-            background: rgba(0, 1, 41, 1);
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-        }
-
-        .web__container {
-            display: flex;
-            gap: 80px;
-            max-width: 1200px;
-            margin: 0 auto;
-            align-items: center;
-        }
-
-        .web__text {
-            flex: 1;
-        }
-
-        .web__text h2 {
-            margin-bottom: 30px;
-        }
-
-        .web__text p {
-            font-size: 20px;
-            opacity: 0.8;
-        }
-
-        .web__card {
-            flex: 1;
-            border: 2px solid rgba(255, 255, 255, 0.3);
-            border-radius: 30px;
-            background: rgba(0, 1, 41, 1);
-            padding: 50px;
-            backdrop-filter: blur(10px);
         }
 
         /* TARIFS */
         .tarifs {
             padding: 120px 40px;
-            background-image: url("ressources_services/bg tarifs.png") ;
+            background-image: url("ressources_services/bg tarifs.png");
             background-position: center;
             background-repeat: no-repeat;
-            padding-left: 140px;
         }
 
         .tarifs h2 {
             margin-bottom: 80px;
+            text-align: left;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .tarifs__container {
@@ -431,6 +355,7 @@ font-family: "area-inktrap", sans-serif;
             padding: 50px 40px;
             background: rgba(0, 1, 41, 1);
             transition: all 0.4s ease;
+            text-align: center;
         }
 
         .tarif-card.featured {
@@ -451,7 +376,7 @@ font-family: "area-inktrap", sans-serif;
         .tarif-card .subtitle {
             font-size: 16px;
             opacity: 0.7;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
         }
 
         .tarif-card .price {
@@ -469,6 +394,7 @@ font-family: "area-inktrap", sans-serif;
             font-weight: 600;
             font-size: 18px;
             transition: all 0.3s ease;
+            margin-top: 20px;
         }
 
         .tarif-card:not(.featured) .btn {
@@ -493,29 +419,73 @@ font-family: "area-inktrap", sans-serif;
             border: 2px solid #fff;
         }
 
-        /* RESPONSIVE */
-        @media (max-width: 1024px) {
-            h1 {
-                font-size: 50px;
-            }
-
-            .box_spe_two {
-                flex-direction: column;
-            }
-
-            .vision__container,
-            .design__container,
-            .web__container {
-                flex-direction: column;
-            }
-
-            .tarifs__container {
-                flex-direction: column;
-                align-items: center;
-            }
+        /* FOOTER */
+        .footer {
+            width: 100%;
+            background-image: url("/ressources_accueil/fond_footer.png");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            padding: 60px;
         }
+
+        .container_footer {
+            display: flex;
+            gap: 200px;
+            margin-left: 50px;
+        }
+
+        .container_footer h3 {
+            font-size: 40px;
+            text-align: left;
+        }
+
+        .container_footer h4 {
+            font-size: 25px;
+            font-family: "Indivisible", sans-serif;
+            color: #fff;
+        }
+
+        .pages {
+            display: flex;
+            gap: 65px;
+        }
+
+        .pages > div {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .pages a {
+            font-family: "Indivisible", sans-serif;
+            font-size: 24px;
+            color: #fff;
+            text-decoration: none;
+            transition: 0.3s ease;
+        }
+
+        #contact {
+            text-align: end;
+        }
+
+        .pages a:hover {
+            transition: 0.3s ease;
+            opacity: 0.9;
+            transform: scale(1.02);
+        }
+
+        .logo_reseaux {
+            display: flex;
+            margin-top: 0px !important;
+        }
+
+        .reseaux h4 {
+            margin-bottom: 0 !important;
+        }
+
     </style>
 </head>
+
 <body>
     <!-- HEADER -->
     <header class="header">
@@ -548,59 +518,53 @@ font-family: "area-inktrap", sans-serif;
 
     <!-- BANDEAU -->
     <div class="bandeau">
-      <div class="bandeau__track">
-        <div class="bandeau__content">
-          <span>Découvrez nos services •</span>
-          <span>Découvrez nos services •</span>
-          <span>Découvrez nos services •</span>
-          <span>Découvrez nos services •</span>
+        <div class="bandeau__track">
+            <div class="bandeau__content">
+                <span>Découvrez nos services •</span>
+                <span>Découvrez nos services •</span>
+                <span>Découvrez nos services •</span>
+                <span>Découvrez nos services •</span>
+            </div>
+            <div class="bandeau__content">
+                <span>Découvrez nos services •</span>
+                <span>Découvrez nos services •</span>
+                <span>Découvrez nos services •</span>
+                <span>Découvrez nos services •</span>
+            </div>
         </div>
-    
-        <!-- DUPLICATION pour boucle infinie -->
-        <div class="bandeau__content">
-          <span>Découvrez nos services •</span>
-          <span>Découvrez nos services •</span>
-          <span>Découvrez nos services •</span>
-          <span>Découvrez nos services •</span>
-          <span>Découvrez nos services •</span>
-          <span>Découvrez nos services •</span>
-          <span>Découvrez nos services •</span>
-          <span>Découvrez nos services •</span>
-        </div>
-      </div>
-  </div>
+    </div>
 
     <!-- SERVICES -->
     <div class="service_service">
         <div class="box_spe_two">
-            <div id="DA">
+            <div class="service-card">
                 <img src="ressources_accueil/DA.svg" alt="Logo Direction Artistique">
-                <p>Direction Artistique</p>
+                <p class="title">Direction Artistique</p>
                 <p class="description">Kaya Samper transforme les idées en univers visuels cohérents et percutants. De la conception d'identité à la vision globale d'un projet.</p>
             </div>
-            <div id="graphisme">
+            <div class="service-card">
                 <img src="ressources_accueil/graphisme.svg" alt="Logo graphisme">
-                <p>Design Graphique</p>
+                <p class="title">Design Graphique</p>
                 <p class="description">Carolina Leclercq donne vie aux concepts avec créativité et précision. Logos, supports print ou contenus digitaux.</p>
             </div>
-            <div id="web">
+            <div class="service-card">
                 <img src="ressources_accueil/web.svg" alt="Logo Webdesign">
-                <p>Webdesign + développement Web</p>
+                <p class="title">Webdesign + développement Web</p>
                 <p class="description">Lina Mebrak allie design et technique pour créer des sites web fonctionnels, esthétiques et intuitifs.</p>
             </div>
         </div>
     </div>
 
     <!-- SECTION VISION -->
-    <section class="vision">
-        <div class="vision__container">
-            <div class="vision__text">
+    <section class="section-layout vision">
+        <div class="section-layout__container">
+            <div class="section-layout__text">
                 <h1>Donner une Vision, Créer une Identité</h1>
                 <p>Avec notre directrice artistique,<br>Kaya Samper.</p>
             </div>
-            <div class="vision__card">
+            <div class="section-layout__card">
                 <div class="card-item">
-                    <img src="ressources_services/palette.svg" alt="Palette">
+                    <img src="ressources_services/palette1.svg" alt="Palette">
                     <div>
                         <h3><strong>Identité visuelle</strong></h3>
                         <p>Créations d'identité visuelle sur mesure pour votre marque.</p>
@@ -625,13 +589,13 @@ font-family: "area-inktrap", sans-serif;
     </section>
 
     <!-- SECTION DESIGN -->
-    <section class="design">
-        <div class="design__container">
-            <div class="design__text">
-                <h1>Donner vie aux Idées par le Design</h1><br>
+    <section class="section-layout section-layout--reverse design">
+        <div class="section-layout__container">
+            <div class="section-layout__text">
+                <h1>Donner vie aux Idées par le Design</h1>
                 <p>Avec notre graphiste<br>Carolina Leclercq.</p>
             </div>
-            <div class="design__card">
+            <div class="section-layout__card">
                 <div class="card-item">
                     <img src="ressources_services/support print.png" alt="Print">
                     <div>
@@ -658,13 +622,13 @@ font-family: "area-inktrap", sans-serif;
     </section>
 
     <!-- SECTION WEB -->
-    <section class="web-section">
-        <div class="web__container">
-            <div class="web__text">
-                <h1>Allier design et technique pour vos projets digitaux.</h1><br>
+    <section class="section-layout web-section">
+        <div class="section-layout__container">
+            <div class="section-layout__text">
+                <h1>Allier design et technique pour vos projets digitaux.</h1>
                 <p>Avec notre web designer et développeuse<br>Lina Mebrak.</p>
             </div>
-            <div class="web__card">
+            <div class="section-layout__card">
                 <div class="card-item">
                     <img src="ressources_services/maquettage.png" alt="Maquettage">
                     <div>
@@ -676,7 +640,7 @@ font-family: "area-inktrap", sans-serif;
                     <img src="ressources_services/dev.png" alt="Développement">
                     <div>
                         <h3><strong>Développement</strong></h3>
-                        <p>Application web et mobile responsive (front-end et back-end) à les écrans.</p>
+                        <p>Application web et mobile responsive (front-end et back-end).</p>
                     </div>
                 </div>
                 <div class="card-item">
@@ -713,11 +677,40 @@ font-family: "area-inktrap", sans-serif;
             <div class="tarif-card">
                 <h3>Pack Duo</h3>
                 <p class="subtitle">Pour deux pôles combinés</p>
-                <p>Vous qui combine de vos services pour une approche plus complète.</p>
+                <p>Combine deux services pour une approche plus complète.</p>
                 <p class="price">1200€ - 2500€</p>
                 <a href="#" class="btn">Commencer !</a>
             </div>
         </div>
     </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container_footer">
+            <h3>Votre vision,<br>Notre direction.</h3>
+            <div class="pages">
+                <div class="col_one">
+                    <a href="accueil.html">Accueil</a><br><br>
+                    <a href="apropos.html">À propos</a>
+                </div>
+                <div class="col_two">
+                    <a href="#équipe">L'équipe</a><br><br>
+                    <a href="service.html">Services</a>
+                </div>
+                <div class="col_three">
+                    <a href="contact.html">Contact</a>
+                </div>
+            </div>
+            <div class="reseaux">
+                <h4>SUIVEZ NOUS !</h4>
+                <div class="logo_reseaux">
+                    <img src="ressources_accueil/logo_insta.svg" alt="Logo Instagram">
+                    <img src="ressources_accueil/logo_behance.svg" alt="Logo Behance">
+                    <img src="ressources_accueil/logo_linkedin.svg" alt="Logo Linkedin">
+                </div>
+            </div>
+        </div>
+    </footer>
+
 </body>
 </html>

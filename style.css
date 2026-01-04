@@ -407,6 +407,7 @@ input, textarea {
   transform: scale(1.02);
 }
 
+/* à propos */
 .hero_apropos {
   background-image: url("/ressources_apropos/fond-apropos.png");
   height: 100vh;
@@ -532,6 +533,138 @@ body {
   align-items: center;
   text-align: center;
   padding: 60px 0 60px 0;
+}
+
+/* responsive accueil */
+@media screen and (max-width: 768px) {
+  /* Sections accueil */
+  .hero,
+  .accueil_apropos,
+  .service_accueil,
+  .équipe {
+    align-items: center;
+    text-align: center;
+    height: auto;
+    padding: 100px 0 60px;
+  }
+  /*Texte*/
+  .hero .text_zone,
+  .accueil_apropos .text_zone,
+  .service_accueil .text_zone,
+  .équipe .text_zone {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  /*Boutons */
+  .hero .button_zone,
+  .accueil_apropos .button_zone,
+  .service_accueil .button_zone,
+  .équipe .button_zone {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin: 30px 0;
+  }
+  .hero .white_button,
+  .hero .trans_button,
+  .accueil_apropos .trans_button,
+  .service_accueil .trans_button,
+  .équipe .trans_button {
+    margin: 0;
+    width: fit-content;
+    text-align: center;
+  }
+  .button_zone {
+    display: flex;
+  }
+  /* Services */
+  .service_accueil .box_spe {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 25px;
+  }
+  .service_accueil #DA,
+  .service_accueil #graphisme,
+  .service_accueil #web {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  /* Équipe */
+  .équipe .photos {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+  .équipe .photos > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+/* Responsive page contact */
+@media screen and (max-width: 768px) {
+  /*  Hero  */
+  .hero_contact {
+    height: auto;
+    padding: 120px 0 60px;
+  }
+  .hero_contact .text_zone {
+    width: 90%;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+  /* Container principal */
+  .container_contact {
+    flex-direction: column;
+    width: 90%;
+    gap: 40px;
+    margin-top: 0;
+  }
+  /* Informations  */
+  .informations {
+    width: 100%;
+    text-align: center;
+  }
+  .informations > p {
+    font-size: 20px;
+  }
+  .email,
+  .tel,
+  .loc {
+    width: 100%;
+    justify-content: center;
+  }
+  .text {
+    text-align: left;
+  }
+  /*  Formulaire  */
+  .form-wrapper {
+    width: 100%;
+    padding: 20px;
+    text-align: left;
+  }
+  .row {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .field label {
+    font-size: 16px;
+  }
+  input,
+  textarea {
+    font-size: 14px;
+  }
+  /* Bouton */
+  .submit_button {
+    width: 100%;
+    max-width: 200px;
+    margin: 20px auto 0;
+    display: block;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

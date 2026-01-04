@@ -292,4 +292,294 @@ body {
   margin-top: -10px !important;
 }
 
+/* ===========================
+   PAGE CAROLINA (SCOPÉE)
+   =========================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body.caro-page {
+  margin: 0;
+  width: 100%;
+  background: #F1F1F1;
+  color: #000129;
+  font-family: "roboto-mono", monospace;
+  overflow-x: hidden;
+  /* --- HEADER : on garde ton header global --- */
+}
+body.caro-page .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-image: url("/ressources_accueil/fond_header.png");
+  background-color: transparent;
+}
+body.caro-page .nav ul#menu li a {
+  color: #fff;
+}
+body.caro-page #contact_button a {
+  background: #F1F1F1;
+  color: #F15CA3;
+}
+body.caro-page main.caro {
+  padding-top: 90px;
+  width: 100%;
+}
+body.caro-page {
+  /* ✅ même marge que lina.html (50px) */
+}
+body.caro-page .caro-wrap {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+@media (max-width: 900px) {
+  body.caro-page .caro-wrap {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+@media (max-width: 520px) {
+  body.caro-page .caro-wrap {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+body.caro-page {
+  /* --- HERO : pleine largeur --- */
+}
+body.caro-page .caro-hero {
+  width: 100%;
+}
+body.caro-page .caro-hero img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+body.caro-page {
+  /* --- Typo / titres --- */
+}
+body.caro-page h2, body.caro-page h3 {
+  font-family: "Times New Roman", Times, serif;
+  color: #3F4BB0;
+  margin: 0 0 12px 0;
+}
+body.caro-page h2 {
+  font-size: clamp(36px, 3vw, 58px);
+  letter-spacing: 0.3px;
+}
+body.caro-page h2 em {
+  font-style: italic;
+}
+body.caro-page h3 {
+  font-size: clamp(26px, 2.2vw, 36px);
+}
+body.caro-page {
+  /* ✅ texte comme la maquette : uppercase + tracking + lignes propres */
+}
+body.caro-page p {
+  font-family: "roboto-mono", monospace;
+  color: #000129;
+  font-size: 14px;
+  line-height: 1.7;
+  margin: 0 0 14px 0;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  max-width: 78ch;
+}
+body.caro-page {
+  /* =========================
+     ABOUT
+     ========================= */
+}
+body.caro-page .caro-about {
+  padding: 70px 0 10px 0;
+}
+body.caro-page .caro-about__grid {
+  display: grid;
+  grid-template-columns: minmax(480px, 1fr) minmax(360px, 520px);
+  gap: 60px;
+  align-items: start;
+}
+body.caro-page .caro-about__text {
+  min-width: 0;
+}
+body.caro-page .caro-about__number {
+  font-family: "Times New Roman", Times, serif;
+  color: #3F4BB0;
+  font-size: 22px;
+  margin-top: 18px;
+}
+body.caro-page {
+  /* ✅ PHOTO PLUS GRANDE + rendu polaroid propre */
+}
+body.caro-page .caro-about__photo {
+  justify-self: end;
+  width: min(520px, 42vw);
+  aspect-ratio: 498/560; /* correspond à la version recadrée */
+  transform: rotate(6deg);
+  filter: drop-shadow(0 14px 30px rgba(0, 0, 0, 0.18));
+  overflow: hidden; /* important pour le recadrage visuel */
+}
+body.caro-page .caro-about__photo img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover; /* recadre si besoin */
+  object-position: center; /* centre la zone */
+}
+body.caro-page {
+  /* =========================
+     PROJETS
+     ========================= */
+}
+body.caro-page .caro-projects {
+  padding: 30px 0 90px 0;
+}
+body.caro-page {
+  /* ✅ titre PROJETS bien à droite, comme ta maquette */
+}
+body.caro-page .caro-projects__title {
+  display: flex;
+  justify-content: flex-end;
+  margin: 10px 0 28px 0;
+}
+body.caro-page .caro-projects__title h2 {
+  text-align: right;
+  max-width: none;
+}
+body.caro-page .caro-project {
+  display: grid;
+  grid-template-columns: minmax(480px, 1fr) minmax(360px, 520px);
+  gap: 26px 70px;
+  padding: 44px 0 58px 0;
+  border-bottom: 1px solid rgba(0, 1, 41, 0.15);
+  align-items: start;
+}
+body.caro-page .caro-project:last-child {
+  border-bottom: 0;
+}
+body.caro-page .caro-project__intro {
+  min-width: 0;
+}
+body.caro-page .caro-project__meta {
+  min-width: 0;
+}
+body.caro-page .caro-meta__row {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(0, 1, 41, 0.2);
+}
+body.caro-page .caro-meta__row:last-child {
+  border-bottom: 0;
+}
+body.caro-page .caro-meta__label {
+  color: rgba(0, 1, 41, 0.65);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+body.caro-page .caro-meta__value {
+  color: #3F4BB0;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-align: right;
+  white-space: nowrap;
+}
+body.caro-page {
+  /* MEDIA */
+}
+body.caro-page .caro-project__media {
+  grid-column: 1/-1;
+  margin-top: 20px;
+}
+body.caro-page .caro-project__media img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+body.caro-page {
+  /* ASSETS (base) */
+}
+body.caro-page .caro-project__assets {
+  grid-column: 1/-1;
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  margin: 22px 0 16px 0;
+}
+body.caro-page .caro-project__assets img {
+  display: block;
+  width: auto;
+  max-width: 100%;
+}
+body.caro-page {
+  /* ✅ ZERO : logo/palette à la taille de la maquette + bien répartis gauche/droite */
+}
+body.caro-page .caro-project--zero .caro-project__assets {
+  justify-content: space-between;
+  gap: 80px;
+  margin-top: 26px;
+  margin-bottom: 24px;
+}
+body.caro-page .caro-project--zero .caro-project__assets .zero-logo {
+  height: 170px; /* GROS comme maquette */
+}
+body.caro-page .caro-project--zero .caro-project__assets .zero-palette {
+  height: 110px; /* GROS comme maquette */
+}
+body.caro-page {
+  /* =========================
+     RESPONSIVE
+     ========================= */
+}
+@media (max-width: 980px) {
+  body.caro-page .caro-about__grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  body.caro-page .caro-about__photo {
+    justify-self: center;
+    width: min(460px, 86vw);
+    transform: rotate(3deg);
+  }
+  body.caro-page .caro-project {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+  body.caro-page .caro-projects__title {
+    justify-content: flex-start;
+  }
+  body.caro-page .caro-projects__title h2 {
+    text-align: left;
+  }
+  body.caro-page .caro-project--zero .caro-project__assets {
+    justify-content: flex-start;
+    gap: 30px;
+  }
+  body.caro-page .caro-project--zero .caro-project__assets .zero-logo {
+    height: 130px;
+  }
+  body.caro-page .caro-project--zero .caro-project__assets .zero-palette {
+    height: 90px;
+  }
+}
+@media (max-width: 520px) {
+  body.caro-page p {
+    font-size: 13px;
+  }
+}
+
 /*# sourceMappingURL=style_portfolio.css.map */

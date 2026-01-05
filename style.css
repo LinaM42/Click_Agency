@@ -167,48 +167,42 @@ h3 {
   text-decoration: none;
   background-color: #fff;
   font-size: 20px;
-  padding: 10px 20px;
+  font-weight: 600;
+  padding: 15px 40px;
   border-radius: 50px;
   font-family: "indivisible", sans-serif;
-  margin-right: 20px;
+  transition: all 0.3s ease;
+  display: inline-block;
 }
 
 .white_button:hover {
-  color: #fff;
-  text-decoration: none;
   background-color: transparent;
-  font-size: 20px;
-  padding: 10px 20px;
-  border-radius: 50px;
-  font-family: "indivisible", sans-serif;
+  color: #fff;
   border: 2px solid #fff;
-  transition: 0.3s ease;
-  opacity: 0.9;
-  transform: scale(1.02);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.2);
 }
 
 .trans_button {
   color: #fff;
+  border: 2px solid #fff;
   text-decoration: none;
-  background-color: transparent;
+  background-color: none;
   font-size: 20px;
-  padding: 10px 20px;
+  font-weight: 600;
+  padding: 15px 40px;
   border-radius: 50px;
   font-family: "indivisible", sans-serif;
-  border: 2px solid #fff;
+  transition: all 0.3s ease;
+  display: inline-block;
 }
 
 .trans_button:hover {
-  color: #000129;
-  text-decoration: none;
   background-color: #fff;
-  font-size: 20px;
-  padding: 10px 20px;
-  border-radius: 50px;
-  font-family: "indivisible", sans-serif;
-  transition: 0.3s ease;
-  opacity: 0.9;
-  transform: scale(1.02);
+  color: #000129;
+  border: 2px solid #fff;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.2);
 }
 
 .button_zone {

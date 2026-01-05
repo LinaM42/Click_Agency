@@ -1,21 +1,4 @@
 
-@charset "UTF-8";
-
-@font-face {
-
-  font-family: "body-text-regular";
-
-  src: url("./font/Body Text Fit Regular.ttf") format("opentype");
-
-}
-
-@font-face {
-
-  font-family: "body-text-bold";
-
-  src: url("./font/body-text-fit-bold.ttf") format("opentype");
-
-}
 
 body {
 
@@ -39,7 +22,14 @@ body {
 
 }
 
+body {
+  font-family: 'Times New Roman', Times, serif;
+}
  
+.h2{
+  font-family: 'Times New Roman', Times, serif !important;
+  color: #3F4BB0 !important;
+}
 
 .header .container {
 
